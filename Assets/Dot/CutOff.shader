@@ -28,6 +28,7 @@
 	
         void surf (Input IN, inout SurfaceOutput o)
         {
+			//saturate es un clamp01
 			o.Albedo = tex2D(_Diffuse, IN.uv_Diffuse).rgb * 2;
 			half rim = 1 - saturate(dot(normalize(IN.viewDir), o.Normal));
 			half rimPowered = pow(rim, _RimPower);

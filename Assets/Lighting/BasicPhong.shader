@@ -27,6 +27,7 @@
 		half _Spec;
 		fixed _Gloss;
 
+        //SurfaceOutput: mirar en la doc de unity sobre qué contiene
         void surf (Input IN, inout SurfaceOutput o)
         {
 			//o.Albedo = dot(normalize(IN.viewDir+o.) _Color.rgb;

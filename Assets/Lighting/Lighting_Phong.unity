@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -132,6 +133,10 @@ PrefabInstance:
       value: Zombunny
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 8d5d219e0922649ebad407ab0e56b446, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 8d5d219e0922649ebad407ab0e56b446, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.38704252
       objectReference: {fileID: 0}
@@ -144,6 +149,10 @@ PrefabInstance:
       value: 9.860793
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 8d5d219e0922649ebad407ab0e56b446, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.13629626
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 8d5d219e0922649ebad407ab0e56b446, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -154,14 +163,6 @@ PrefabInstance:
     - target: {fileID: 400002, guid: 8d5d219e0922649ebad407ab0e56b446, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 8d5d219e0922649ebad407ab0e56b446, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.13629626
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 8d5d219e0922649ebad407ab0e56b446, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 8d5d219e0922649ebad407ab0e56b446, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -206,8 +207,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2116324656}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 1
+  m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10
@@ -308,7 +310,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
