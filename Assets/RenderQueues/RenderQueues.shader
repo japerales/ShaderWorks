@@ -9,9 +9,11 @@
     {
 		//Buffers:
 		/*
-		El frame Buffer es un array en memoria que guarda el color de cada pixel en la pantalla.
-		El ZBuffer (o Depth Buffer) es otro array análogo que tiene como cometido encargarse de qué objetos aparecen por delante de otros, en función de su profundidad con respecto a la cámara.
-		Analiza previamente si hay algún valor en el frame buffer. Si no, le da un valor de profundidad en ese momento. Cuanto más lejos está el objeto, más alto es el número que se da.
+		El frame Buffer es un array 2D en memoria que guarda el color de cada pixel en la pantalla.
+		El ZBuffer (o Depth Buffer) es otro array que existe junto con el frame buffer, que tiene como cometido encargarse de qué objetos aparecen por delante de otros, 
+        en función de su profundidad con respecto a la cámara. Ambos trabajan a la vez, juntos.
+		El Zbuffer Analiza previamente si hay algún valor en el frame buffer. Si no, le da un valor de profundidad en ese momento y el frame buffer pinta el pixel. 
+        Cuanto más lejos está el objeto, más alto es el número que se da. 
 		Si el framebuffer quiere pintar en un pixel ya pintado previamente, antes que nada hace que el zbuffer mire si existe algún valor ahí. Si el valor es mayor que el que hay, no se escribe nada.
 		Si el valor es menor, entonces se actualiza el zbuffer con ese nuevo valor, por ejemplo: el valor anterior era 3, y ahora es 1. Además, esto permite al frame buffer sobreescribir el nuevo valor de color, 
 		ya que está delante del anterior.
